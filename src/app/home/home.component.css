@@ -1,0 +1,207 @@
+.top-section {
+  background-image: url('../../assets/images/home-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  height: 0;
+  padding-top: 56%;
+  position: relative;
+  width: 100%;
+}
+
+.top-section-text {
+  display: flex;
+  flex-direction: column;
+  left: 11vw;
+  position: absolute;
+  text-decoration: none;
+  top: 15vw;
+}
+
+.arrow {
+  border: solid #000;
+  border-width: 0 1px 1px 0;
+  border-color: #fff;
+  display: inline-block;
+  padding: 3px;
+}
+
+.down {
+  transform: rotate(45deg);
+}
+
+.top-section-text h2 {
+  font-size: 3.7vw;
+  line-height: 3.7vw;
+  margin: 0;
+}
+
+.top-section-text p {
+  font-size: 1.3vw;
+}
+
+.top-section-text a {
+  border: 1px solid #fff;
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  height: 60px;
+  margin: 60px auto 0;
+  text-decoration: none;
+  width: 60px;
+}
+
+.top-section-text a span {
+  margin: auto;
+}
+
+.join-section {
+  color: #fff;
+  margin: 0 auto;
+  width: 64.6vw;
+}
+
+.join-section .join-section-join {
+  font-size: 2.604vw;
+  margin: 9vw 0 4vw 0;
+  text-align-last: center;
+}
+
+.join-section .join-section-artists {
+  display: flex;
+  justify-content: space-between;
+}
+
+.join-section .join-section-artist {
+  width: 14.3vw;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 0;
+  padding-top: 30%;
+  position: relative;
+}
+
+.join-section .join-section-artist-content {
+  bottom: 1vw;
+  left: 1vw;
+  position: absolute;
+}
+
+.join-section-artist-title {
+  font-size: 1.56vw;
+  font-weight: 600;
+  line-height: 1.8vw;
+}
+
+.join-section-artist-name {
+  color: #ffda2a;
+  font-size: 0.67vw;
+  font-weight: 500;
+}
+
+.join-section-artist-genre {
+  font-size: 0.67vw;
+  margin-left: 5px;
+}
+
+.join-section .join-section-keep {
+  font-size: 3.13vw;
+  margin: 11vw 0 4vw 0;
+  text-align-last: center;
+}
+
+.musician-image {
+  background-image: url('../../assets/images/musician.png');
+}
+
+.producer-image {
+  background-image: url('../../assets/images/producer.png');
+}
+
+.composer-image {
+  background-image: url('../../assets/images/composer.png');
+}
+
+.agent-image {
+  background-image: url('../../assets/images/agent.png');
+}
+
+.join-section-do-lists {
+  column-gap: 3.5vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 10vw;
+  row-gap: 2.61vw;
+}
+
+.join-section-do-lists h3 {
+  color: #ffda2a;
+  font-size: 1.042vw;
+  margin: 0;
+}
+
+.join-section-do-lists p {
+  font-size: 0.886vw;
+  margin: 0.7vw 0 0 0;
+}
+
+.start-section {
+  background-color: #5b617b;
+  display: flex;
+  height: 39.85vw;
+}
+
+.start-section-width {
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 1920px;
+  padding: 0 2vw 0 11vw;
+  width: 100vw;
+}
+
+.start-section-content {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.start-section-content div {
+  font-weight: bold;
+  font-size: 3.14vw;
+}
+
+.start-section-content button {
+  margin-top: 2vw;
+  background-color: #FFDA2A;
+  color: #171717;
+  border: none;
+  border-radius: 20px;
+  align-self: flex-start;
+  cursor: pointer;
+  width: 8.87vw;
+  height: 2.82vw;
+  font-weight: 500;
+  font-size: 1.05vw;
+}
+
+.footer-section {
+  margin: 0 auto;
+  width: 64.6vw;
+}
+
+.footer-section a {
+  color: #fff;
+  font-size: 0.8vw;
+  height: 84px;
+  line-height: 84px;
+  text-decoration: none;
+}
+
+img {
+  width: 50.53vw;
+}

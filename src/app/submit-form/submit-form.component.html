@@ -1,0 +1,94 @@
+<div class="submit-form-page">
+  <a class="close" (click)="closeForm()">×</a>
+
+  <form *ngIf="isFormSubmitted === false" [formGroup]="form" (ngSubmit)="onFormSubmit($event)">
+
+    <div class="form-left-side">
+      <div class="form-left-side-inner-width">
+        <h2>Submit your music</h2>
+        <div class="left-form-height">
+          <label>
+            <input type="text" placeholder="Full Name *"
+                  formControlName="fullName">
+
+            <span class="error"
+                  *ngIf="isValidInput('fullName')">
+              Field is required.
+            </span>
+          </label>
+
+          <label>
+            <input type="text" placeholder="E-mail"
+                  formControlName="email">
+          </label>
+
+          <label>
+            <input type="text" placeholder="Country"
+                  formControlName="country">
+          </label>
+
+          <label class="tooltip" >
+            <textarea type="text" placeholder="Bio"
+                      formControlName="bio">
+            </textarea>
+            <span class="tooltiptext">Let us know who you are and where you’re coming from,
+              what inspires you, who you have worked with and what you think is interesting
+              about your work in the world of music and film, etc.  How should we present you
+              as an artist? </span>
+          </label>
+
+          <label>
+            <input type="text" placeholder="What do you do?"
+                  formControlName="bioDescription">
+          </label>
+
+          <label>
+            <input type="text" placeholder="Portfolio links"
+                  formControlName="links">
+          </label>
+
+          <label class="registered-label">
+            <span>Are you registered with PRO</span>
+            <div>
+              <label class="radio-label">
+                <input type="radio"
+                      [value]="true"
+                      formControlName="withPro" />
+                <span>Yes</span>
+              </label>
+
+              <label class="radio-label">
+                <input type="radio"
+                      formControlName="withPro" />
+                <span>No</span>
+              </label>
+            </div>
+          </label>
+
+          <label *ngIf="form.get('withPro').value">
+            <input type="text"  placeholder="Name of the pro"
+                      formControlName="proName" />
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-right-side">
+      <div class="form-right-side-inner-width">
+        bla bla bla  bla bla bla <br>
+        bla bla bla  bla bla bla <br>
+        bla bla bla  bla bla bla <br>
+        <button [disabled]="form.invalid" type="submit" class="btn btn-warning">
+          Send
+        </button>
+      </div>
+    </div>
+
+  </form>
+
+  <div *ngIf="isFormSubmitted === true" class="finish-submit-view">
+    <div>Thank You</div>
+    <p>Our team would review your songs and get back to you.</p>
+    <img src="assets/images/complete.png" alt="">
+  </div>
+</div>

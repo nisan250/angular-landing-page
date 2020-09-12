@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  left: 10px;
+  position: absolute;
+  top: 4px;
+  z-index: 1;
+}
+.navbar-brand {
+  color: #ffda2a;
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+.navbar-links {
+  display: flex;
+  list-style: none;
+  margin: auto 0 auto 2vw;
+  padding: 0;
+}
+
+.navbar-links li {
+  margin: 0 0 0 1.5vw;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar-links a.active {
+  color: #ffda2a;
+}
+
