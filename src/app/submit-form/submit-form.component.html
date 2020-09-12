@@ -1,5 +1,4 @@
 <div class="submit-form-page">
-  <a class="close" (click)="closeForm()">×</a>
 
   <form *ngIf="isFormSubmitted === false" [formGroup]="form" (ngSubmit)="onFormSubmit($event)">
 

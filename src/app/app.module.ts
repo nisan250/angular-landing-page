@@ -9,6 +9,7 @@ import { AboutComponent } from './about/about.component';
 import { TestComponent } from './test/test.component';
 import { SubmitFormComponent } from './submit-form/submit-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from './shared/shared.module';
 // import { TooltipDirective } from './tooltip.directive';
 
 @NgModule({
@@ -25,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

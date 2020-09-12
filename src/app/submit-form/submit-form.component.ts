@@ -20,23 +20,23 @@ export class SubmitFormComponent implements OnInit {
 
   public isFormSubmitted = false;
 
-  constructor(private fb: FormBuilder, private router: Router,) {
+  constructor(private fb: FormBuilder, private router: Router) {
   }
 
   ngOnInit(): void {
   }
 
-  closeForm(): void {
-    this.isFormSubmitted = false;
-    this.router.navigate(['/home']);
-  }
+  // closeForm(): void {
+  //   this.isFormSubmitted = false;
+  //   this.router.navigate(['/home']);
+  // }
 
   isValidInput(fieldName): boolean {
     const control = this.form.get(fieldName);
     return control.invalid && (control.dirty || control.touched);
   }
 
-  onFormSubmit($event: any) {
+  onFormSubmit($event: any): void {
     console.warn(this.form.value);
     localStorage.setItem('form-data', JSON.stringify(this.form.value));
     this.isFormSubmitted = true;

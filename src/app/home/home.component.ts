@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalService } from '../shared/components/modal/modal.service';
 
 @Component({
   selector: 'app-home',
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  bodyText: string;
 
-  constructor() { }
+  constructor(private modalService: ModalService) { }
 
   scrollToElement($element): void {
     console.log($element);
@@ -17,4 +19,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  openModal(id: string): void {
+    this.modalService.open(id);
+  }
+
+  closeModal(id: string): void {
+      this.modalService.close(id);
+  }
 }

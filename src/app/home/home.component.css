@@ -60,7 +60,11 @@
 .join-section {
   color: #fff;
   margin: 0 auto;
-  width: 64.6vw;
+
+  background-image: linear-gradient(to bottom, rgba(23, 23, 23, 1) 40%, rgba(23, 23, 23, 0.5)), url('../../assets/images/join.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .join-section .join-section-join {
@@ -72,6 +76,8 @@
 .join-section .join-section-artists {
   display: flex;
   justify-content: space-between;
+  width: 64.6vw;
+  margin: 0 auto;
 }
 
 .join-section .join-section-artist {
@@ -133,8 +139,10 @@
   column-gap: 3.5vw;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-bottom: 10vw;
   row-gap: 2.61vw;
+  width: 64.6vw;
+  margin: 0 auto 0 auto;
+  padding-bottom: 6vw;
 }
 
 .join-section-do-lists h3 {
@@ -204,4 +212,15 @@
 
 img {
   width: 50.53vw;
+}
+
+.close-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+  z-index: 2;
 }

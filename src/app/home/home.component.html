@@ -78,7 +78,9 @@
       <div>Things to check<br>
         before we start
       </div>
-      <button routerLink="/submit-form">Start Now</button>
+      <!-- <button routerLink="/submit-form">Start Now</button> -->
+      <button (click)="openModal('custom-modal-1')">Start Now</button>
+
     </div>
     <img src="assets/images/start.png" alt="">
   </div>
@@ -88,3 +90,7 @@
   <a href="#">artist@artlist.io</a>
 </div>
 
+<app-modal id="custom-modal-1">
+  <app-submit-form></app-submit-form>
+  <a class="close-modal" (click)="closeModal('custom-modal-1')">×</a>
+</app-modal>
