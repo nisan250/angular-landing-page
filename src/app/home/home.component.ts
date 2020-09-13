@@ -7,7 +7,7 @@ import { ModalService } from '../shared/components/modal/modal.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  bodyText: string;
+  public isSubmitted: boolean;
 
   constructor(private modalService: ModalService) { }
 
@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.isSubmitted = false;
   }
 
   openModal(id: string): void {

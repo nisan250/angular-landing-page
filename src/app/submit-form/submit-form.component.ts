@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Input, EventEmitter, Output} from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
 import { Router } from '@angular/router';
 @Component({
@@ -18,7 +18,8 @@ export class SubmitFormComponent implements OnInit {
     proName: [''],
   });
 
-  public isFormSubmitted = false;
+  @Input() isSubmitted: boolean;
+  @Output() isSubmittedChange = new EventEmitter<boolean>();
 
   constructor(private fb: FormBuilder, private router: Router) {
   }
@@ -39,6 +40,8 @@ export class SubmitFormComponent implements OnInit {
   onFormSubmit($event: any): void {
     console.warn(this.form.value);
     localStorage.setItem('form-data', JSON.stringify(this.form.value));
-    this.isFormSubmitted = true;
+
+    this.isSubmitted = true;
+    this.isSubmittedChange.emit(this.isSubmitted);
   }
 }

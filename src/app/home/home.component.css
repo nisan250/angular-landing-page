@@ -224,3 +224,20 @@ img {
   cursor: pointer;
   z-index: 2;
 }
+
+.end-section-content {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.end-section-content div {
+  font-weight: bold;
+  font-size: 2.55vw;
+  line-height: 2.87vw;
+}
+
+.end-section-content p {
+  font-size: 1.31vw;
+}

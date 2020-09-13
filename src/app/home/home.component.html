@@ -1,7 +1,7 @@
 <div class="top-section">
   <div class="top-section-text">
     <h2>
-      We want your <br/>inspiring music
+      We want your <br/>inspiring music <br/>
     </h2>
     <p>
       Get your music into films, videos & TV all<br/>around the world. Join the Artlist family.
@@ -74,13 +74,16 @@
 
 <div class="start-section" #start>
   <div class="start-section-width">
-    <div class="start-section-content">
+    <div *ngIf="!isSubmitted" class="start-section-content">
       <div>Things to check<br>
         before we start
       </div>
       <!-- <button routerLink="/submit-form">Start Now</button> -->
       <button (click)="openModal('custom-modal-1')">Start Now</button>
-
+    </div>
+    <div *ngIf="isSubmitted" class="end-section-content">
+      <div>Music submissions are closed for a short summer break</div>
+      <p>We will be back in August and look forward to hearing your music.</p>
     </div>
     <img src="assets/images/start.png" alt="">
   </div>
@@ -91,6 +94,6 @@
 </div>
 
 <app-modal id="custom-modal-1">
-  <app-submit-form></app-submit-form>
+  <app-submit-form [(isSubmitted)]="isSubmitted"></app-submit-form>
   <a class="close-modal" (click)="closeModal('custom-modal-1')">×</a>
 </app-modal>

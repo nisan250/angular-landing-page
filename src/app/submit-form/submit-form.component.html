@@ -1,6 +1,6 @@
 <div class="submit-form-page">
 
-  <form *ngIf="isFormSubmitted === false" [formGroup]="form" (ngSubmit)="onFormSubmit($event)">
+  <form *ngIf="!isSubmitted" [formGroup]="form" (ngSubmit)="onFormSubmit($event)">
 
     <div class="form-left-side">
       <div class="form-left-side-inner-width">
@@ -85,7 +85,7 @@
 
   </form>
 
-  <div *ngIf="isFormSubmitted === true" class="finish-submit-view">
+  <div *ngIf="isSubmitted" class="finish-submit-view">
     <div>Thank You</div>
     <p>Our team would review your songs and get back to you.</p>
     <img src="assets/images/complete.png" alt="">
