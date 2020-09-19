@@ -45,7 +45,8 @@ form {
 }
 
 input,
-textarea {
+textarea,
+select {
   width: 360px;
   /* margin: 8px;
   padding: 8px; */
@@ -55,6 +56,10 @@ textarea {
   font-size: 14px;
   box-sizing: border-box;
   padding: 0 10px;
+}
+
+select {
+  color: #BDBDBD;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -145,13 +150,21 @@ label {
   flex-direction: column;
 }
 
-input {
+input,
+select {
   height: 48px;
+  font-family: 'Raleway';
   /* padding: 0 10px; */
 }
+
+select.ng-dirty {
+  color: #fff;
+}
+
 textarea {
   height: 96px;
   padding: 10px;
+  font-family: 'Raleway';
 }
 .left-form-height {
   height: 502px;

@@ -43,14 +43,14 @@
 
 .top-section-text a {
   border: 1px solid #fff;
-  border-radius: 30px;
+  border-radius: 2vw;
   color: #fff;
   cursor: pointer;
   display: flex;
-  height: 60px;
+  height: 4vw;
   margin: 60px auto 0;
   text-decoration: none;
-  width: 60px;
+  width: 4vw;
 }
 
 .top-section-text a span {

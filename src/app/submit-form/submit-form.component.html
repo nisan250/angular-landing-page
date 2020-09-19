@@ -22,8 +22,16 @@
           </label>
 
           <label>
-            <input type="text" placeholder="Country"
-                  formControlName="country">
+            <!-- <input type="text" placeholder="Country"
+                  formControlName="country"> -->
+            <!-- <select class="custom-select">
+              <option value="" disabled>Choose your city</option>
+              <option>New York</option>
+            </select> -->
+            <select class="custom-select" (change)="changeCountry($event)" formControlName="country">
+              <option value="" disabled>Choose your country</option>
+              <option *ngFor="let cnt of Countries" [ngValue]="cnt">{{cnt}}</option>
+           </select>
           </label>
 
           <label class="tooltip" >

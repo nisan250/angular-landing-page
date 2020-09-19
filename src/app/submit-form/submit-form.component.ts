@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./submit-form.component.css']
 })
 export class SubmitFormComponent implements OnInit {
-  public form = this.fb.group({
+  [x: string]: any;
+  form = this.fb.group({
     fullName: ['', [Validators.required]],
     email: [''],
     country: [''],
@@ -17,6 +18,8 @@ export class SubmitFormComponent implements OnInit {
     withPro: [],
     proName: [''],
   });
+
+  Countries: any = ['Israel', 'France', 'USA', 'Thailand'];
 
   @Input() isSubmitted: boolean;
   @Output() isSubmittedChange = new EventEmitter<boolean>();
@@ -31,6 +34,13 @@ export class SubmitFormComponent implements OnInit {
   //   this.isFormSubmitted = false;
   //   this.router.navigate(['/home']);
   // }
+
+  changeCountry(e): void {
+    console.log(e.target.value);
+    // this.country.setValue(e.target.value, {
+    //   onlySelf: true
+    // });
+  }
 
   isValidInput(fieldName): boolean {
     const control = this.form.get(fieldName);
