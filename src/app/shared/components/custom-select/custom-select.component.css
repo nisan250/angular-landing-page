@@ -1,4 +1,4 @@
-.input-wrapper {
+/* .input-wrapper {
   position: relative;
   min-width: 5.625rem;
   padding: 0.5rem 0 1.5rem;
@@ -55,4 +55,29 @@
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .24);
   display: block;
   overflow: auto;
+} */
+
+label {
+  margin-left: 1px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+input {
+  height: 48px;
+  font-family: 'Raleway';
+
+  width: 360px;
+  border: 1px solid #bdbdbd;
+  background: transparent;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  color: #fff;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #BDBDBD;
+  opacity: 1; /* Firefox */
 }

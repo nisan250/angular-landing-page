@@ -45,8 +45,7 @@ form {
 }
 
 input,
-textarea,
-select {
+textarea {
   width: 360px;
   /* margin: 8px;
   padding: 8px; */
@@ -56,10 +55,6 @@ select {
   font-size: 14px;
   box-sizing: border-box;
   padding: 0 10px;
-}
-
-select {
-  color: #BDBDBD;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -150,15 +145,10 @@ label {
   flex-direction: column;
 }
 
-input,
-select {
+input {
   height: 48px;
   font-family: 'Raleway';
   /* padding: 0 10px; */
-}
-
-select.ng-dirty {
-  color: #fff;
 }
 
 textarea {
@@ -212,8 +202,8 @@ textarea {
 
 input.ng-dirty, input:focus,
 textarea.ng-dirty, textarea:focus {
-  outline: none !important;
-  border:1px solid #fff;
+  /* outline: none !important; */
+  /* border:1px solid #fff; */
   color: #fff
 }
 
@@ -292,4 +282,22 @@ textarea.ng-dirty, textarea:focus {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+.submit-form-button {
+  margin-top: 2vw;
+  background-color: #FFDA2A;
+  color: #171717;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 8.87vw;
+  height: 2.82vw;
+  font-weight: 500;
+  font-size: 1.05vw;
+}
+
+.submit-form-button[disabled] {
+  background-color: #bdbdbd;
+  cursor: default;
 }

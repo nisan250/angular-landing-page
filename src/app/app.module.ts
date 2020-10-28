@@ -10,6 +10,9 @@ import { TestComponent } from './test/test.component';
 import { SubmitFormComponent } from './submit-form/submit-form.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { PortalModule } from '@angular/cdk/portal';
+
 // import { TooltipDirective } from './tooltip.directive';
 
 @NgModule({
@@ -28,6 +31,8 @@ import { SharedModule } from './shared/shared.module';
     FormsModule,
     ReactiveFormsModule,
     SharedModule,
+    PortalModule,
+    OverlayModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

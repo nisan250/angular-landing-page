@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { ModalComponent } from './components/modal/modal.component';
 import { CustomSelectComponent } from './components/custom-select/custom-select.component';
+// import { CustomInputComponent } from './components/custom-input/custom-input.component';
 
 
 @NgModule({
@@ -10,6 +11,6 @@ import { CustomSelectComponent } from './components/custom-select/custom-select.
   imports: [
     CommonModule
   ],
-  exports: [ModalComponent]
+  exports: [ModalComponent, CustomSelectComponent]
 })
 export class SharedModule { }

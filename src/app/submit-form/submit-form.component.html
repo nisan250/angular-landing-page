@@ -20,19 +20,24 @@
             <input type="text" placeholder="E-mail"
                   formControlName="email">
           </label>
-
-          <label>
+          <!-- <app-custom-input></app-custom-input> -->
+          <!-- <label> -->
             <!-- <input type="text" placeholder="Country"
                   formControlName="country"> -->
             <!-- <select class="custom-select">
               <option value="" disabled>Choose your city</option>
               <option>New York</option>
             </select> -->
-            <select class="custom-select" (change)="changeCountry($event)" formControlName="country">
+            <!-- <select class="custom-select" (change)="changeCountry($event)" formControlName="country">
               <option value="" disabled>Choose your country</option>
               <option *ngFor="let cnt of Countries" [ngValue]="cnt">{{cnt}}</option>
-           </select>
-          </label>
+           </select> -->
+          <!-- </label> -->
+
+          <app-custom-select [required]="true"
+            label=""
+            placeholder="Country">
+          </app-custom-select>
 
           <label class="tooltip" >
             <textarea type="text" placeholder="Bio"
@@ -82,10 +87,10 @@
 
     <div class="form-right-side">
       <div class="form-right-side-inner-width">
-        bla bla bla  bla bla bla <br>
-        bla bla bla  bla bla bla <br>
-        bla bla bla  bla bla bla <br>
-        <button [disabled]="form.invalid" type="submit" class="btn btn-warning">
+        Please fill the form on the left<br>
+        This is a demo - you can fill only the first input<br>
+
+        <button [disabled]="form.invalid" type="submit" class="submit-form-button">
           Send
         </button>
       </div>
